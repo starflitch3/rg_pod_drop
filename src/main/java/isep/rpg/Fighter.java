@@ -8,6 +8,7 @@ public abstract class Fighter {
 
 //    public abstract boolean attack(Fighter fighter);
     public boolean attack(Fighter fighter) { return false; }
+    public boolean defense(Fighter fighter) { return false; }
 
     public boolean receiveAttack(int lifePoints) {
         this.lifePoints -= lifePoints;

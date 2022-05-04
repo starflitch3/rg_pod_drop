@@ -136,6 +136,15 @@ public class Game {
         }
     }
 
+    public void startHeroTurnDefense() {
+        Fighter ennemy = this.enemies.get(0); //--> 1 seul ennemi pour l'instant...
+        boolean ennemyDefeated = this.currentFighter.defense(ennemy);
+        if (ennemyDefeated) {
+            this.enemies.remove(ennemy);
+            this.fighters.remove(ennemy);
+        }
+    }
+
     public void startEnemyTurn() {
         // L'ennemi attaque au hasard un des héros encore vivant
         Fighter hero = this.heroes.get(0); //--> 1 seul héro pour l'instant...

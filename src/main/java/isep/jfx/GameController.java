@@ -15,6 +15,8 @@ public class GameController {
     ListView<String> enemyList;
     @FXML
     Button fightButton;
+    @FXML
+    Button DefenseButton;
 
     // "initialize()" est appelé par JavaFX à l'affichage de la fenêtre
     @FXML
@@ -41,6 +43,12 @@ public class GameController {
                     } );
                 break;
             case HERO_TURN:
+                DefenseButton.setText("utiliser le bouclier");
+                DefenseButton.setOnAction( event -> {
+                    Game.context.startHeroTurn();
+                    updateListViews();
+                    Game.context.startNextFighterTurn();
+                });
                 fightButton.setText("Attaque du héro...");
                 fightButton.setOnAction( event -> {
                     Game.context.startHeroTurn();

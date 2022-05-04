@@ -6,4 +6,7 @@ public class Warrior extends Hero {
     public boolean attack(Fighter enemy) {
         return enemy.receiveAttack(5);
     }
+    public boolean defense(Fighter enemy) {
+        return enemy.receiveAttack(10);
+    }
 }
