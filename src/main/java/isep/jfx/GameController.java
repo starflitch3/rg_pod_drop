@@ -21,7 +21,6 @@ public class GameController {
     // "initialize()" est appelé par JavaFX à l'affichage de la fenêtre
     @FXML
     public void initialize() {
-        Game.playGame();
         updateListViews();
         updateFightButton();
     }
