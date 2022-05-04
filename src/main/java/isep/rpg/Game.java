@@ -22,12 +22,12 @@ public class Game {
         Game.context.startCombat();
     }
 
-    public static enum Status {START_COMBAT, HERO_TURN, ENEMY_TURN, END_GAME }
+    public static enum Status { START_COMBAT, HERO_TURN, ENEMY_TURN, END_GAME }
     public Status status;
 
 
 
-    private List<Hero> heroes;
+    public static List<Hero> heroes;
     public List<String> getHeroesStatus() {
         List<String> heroesStatus = new ArrayList<>();
         for (Hero hero: this.heroes) {
