@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public class MainController {
 
+
+
     @FXML
     protected void onStartButtonClick() throws IOException {
         // Affiche la fenêtre principale du jeu
