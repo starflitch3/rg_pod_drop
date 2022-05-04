@@ -11,10 +11,10 @@
    <ListView fx:id="teamList" prefHeight="200.0" prefWidth="200.0" />
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
       <children>
-         <Button fx:id="addHealer" mnemonicParsing="false" text="Add Healer" />
+         <Button fx:id="addHealer" mnemonicParsing="false" onAction="#addHealer" text="Add Healer" />
          <Button fx:id="addMage" mnemonicParsing="false" onAction="#addMage" text="Add Mage" />
-         <Button fx:id="addHunter" mnemonicParsing="false" text="Add hunter" />
-         <Button fx:id="addWarrior" mnemonicParsing="false" text="add Warrior" />
+         <Button fx:id="addHunter" mnemonicParsing="false" onAction="#addHunter" text="Add hunter" />
+         <Button fx:id="addWarrior" mnemonicParsing="false" onAction="#addWarrior" text="add Warrior" />
       </children>
    </HBox>
 
