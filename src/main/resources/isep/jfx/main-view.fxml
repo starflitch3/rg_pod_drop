@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="isep.jfx.MainController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isep.jfx.MainController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <ListView fx:id="teamList" prefHeight="200.0" prefWidth="200.0" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="addHealer" mnemonicParsing="false" text="Add Healer" />
+         <Button fx:id="addMage" mnemonicParsing="false" text="Add Mage" />
+         <Button fx:id="addHunter" mnemonicParsing="false" text="Add hunter" />
+         <Button fx:id="addWarrior" mnemonicParsing="false" text="add Warrior" />
+      </children>
+   </HBox>
 
-    <Label text="MINI-RPG"/>
-    <Button text="Lancer le jeu" onAction="#onStartButtonClick"/>
+    <Label text="MINI-RPG" />
+    <Button onAction="#onStartButtonClick" text="Lancer le jeu" />
 </VBox>
