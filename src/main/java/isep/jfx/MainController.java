@@ -1,6 +1,6 @@
 package isep.jfx;
 
-import isep.rpg.Game;
+import isep.rpg.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -38,6 +38,38 @@ public class MainController {
     @FXML
     public void initialize() {
         Game.playGame();
+        updateTeamListView();
+    }
+
+    @FXML
+    protected void addMage() {
+        Hero hero = new Mage();
+        Game.heroes.add(hero);
+
+        updateTeamListView();
+    }
+
+    @FXML
+    protected void addHealer() {
+        Hero hero = new Healer();
+        Game.heroes.add(hero);
+
+        updateTeamListView();
+    }
+
+    @FXML
+    protected void addWarrior() {
+        Hero hero = new Warrior();
+        Game.heroes.add(hero);
+
+        updateTeamListView();
+    }
+
+    @FXML
+    protected void addHunter() {
+        Hero hero = new Hunter();
+        Game.heroes.add(hero);
+
         updateTeamListView();
     }
 
