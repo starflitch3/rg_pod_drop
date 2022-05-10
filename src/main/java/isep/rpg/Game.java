@@ -150,6 +150,11 @@ public class Game {
         }
     }
 
+    public Hero selectedHeroIndex;
+    public Hero SelectHeroFromHeroes(int index){
+        return heroes.get(index);
+    }
+
 
 
 }
