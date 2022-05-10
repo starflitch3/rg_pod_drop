@@ -5,6 +5,7 @@ public abstract class Fighter {
     private int lifePoints;
     public int getLifePoints() { return lifePoints; }
     public void setLifePoints(int lifePoints) { this.lifePoints = lifePoints; }
+    public  void addLifePoint(int lifePoints) {this.lifePoints += lifePoints;}
 
 //    public abstract boolean attack(Fighter fighter);
     public boolean attack(Fighter fighter) { return false; }

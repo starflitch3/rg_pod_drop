@@ -3,6 +3,7 @@ package isep.jfx;
 import isep.rpg.Enemy;
 import isep.rpg.Game;
 import isep.rpg.Hero;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -16,7 +17,9 @@ public class GameController {
     @FXML
     Button fightButton;
     @FXML
-    Button DefenseButton;
+    Button attack_button;
+    @FXML
+    Button potion_button;
 
     // "initialize()" est appelé par JavaFX à l'affichage de la fenêtre
     @FXML
@@ -34,6 +37,9 @@ public class GameController {
     private void updateFightButton() {
         switch (Game.context.status) {
             case START_COMBAT:
+                attack_button.setDisable(false);
+                potion_button.setDisable(false);
+
                 fightButton.setText("Lancer le combat !");
                 fightButton.setOnAction( event -> {
                     updateListViews();
@@ -42,21 +48,29 @@ public class GameController {
                     } );
                 break;
             case HERO_TURN:
-                DefenseButton.setText("utiliser le bouclier");
-                DefenseButton.setOnAction( event -> {
-                    Game.context.startHeroTurn();
-                    updateListViews();
-                    Game.context.startNextFighterTurn();
-                });
-                fightButton.setText("Attaque du héro...");
-                fightButton.setOnAction( event -> {
+                attack_button.setDisable(false);
+                potion_button.setDisable(false);
+
+                attack_button.setText("Attaque du héro...");
+                attack_button.setOnAction( event -> {
                     Game.context.startHeroTurn();
                     updateListViews();
                     Game.context.startNextFighterTurn();
                     updateFightButton();
-                    } );
+                } );
+                potion_button.setText("Utiliser une potion");
+                potion_button.setOnAction( event -> {
+                    Game.context.usePotion();
+                    updateListViews();
+                    Game.context.startNextFighterTurn();
+                    updateFightButton();
+                } );
+
                 break;
             case ENEMY_TURN:
+                attack_button.setDisable(true);
+                potion_button.setDisable(true);
+
                 fightButton.setText("Attaque de l'ennemi...");
                 fightButton.setOnAction( event -> {
                     Game.context.startEnemyTurn();
@@ -70,5 +84,6 @@ public class GameController {
                 break;
         }
     }
+
 
 }

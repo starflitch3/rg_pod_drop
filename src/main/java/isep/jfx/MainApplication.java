@@ -17,7 +17,7 @@ public class MainApplication extends Application {
                 (MainApplication.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         MainApplication.stage = stage;
-        stage.setTitle("mini-RPG");
+        stage.setTitle("Bienvenue dans la souffrance");
         stage.setScene(scene);
         stage.show();
     }
