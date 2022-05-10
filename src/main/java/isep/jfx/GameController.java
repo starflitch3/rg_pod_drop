@@ -54,8 +54,6 @@ public class GameController {
                     } );
                 break;
             case HERO_TURN:
-                System.out.println(heroList.getSelectionModel().getSelectedIndex());
-
                 attack_button.setVisible(true);
                 potion_button.setVisible(true);
                 attack_button.setDisable(false);
