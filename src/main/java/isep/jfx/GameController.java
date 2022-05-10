@@ -6,9 +6,11 @@ import isep.rpg.Hero;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 
 public class GameController {
 
@@ -97,12 +99,12 @@ public class GameController {
     }
 
     private void initHeroSelectionListener() {
-        heroList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        heroList.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                System.out.println("ListView selection changed from oldValue = "
-                        + oldValue + " to newValue = " + newValue);
+            public void handle(MouseEvent mouseEvent) {
+                System.out.print(heroList.getSelectionModel().getSelectedIndex());
             }
         });
+
     }
 }
