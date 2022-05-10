@@ -37,6 +37,7 @@ public class GameController {
     private void updateFightButton() {
         switch (Game.context.status) {
             case START_COMBAT:
+
                 attack_button.setDisable(false);
                 potion_button.setDisable(false);
                 attack_button.setVisible(false);
@@ -50,6 +51,8 @@ public class GameController {
                     } );
                 break;
             case HERO_TURN:
+                System.out.println(heroList.getSelectionModel().getSelectedIndex());
+
                 attack_button.setVisible(true);
                 potion_button.setVisible(true);
                 attack_button.setDisable(false);
