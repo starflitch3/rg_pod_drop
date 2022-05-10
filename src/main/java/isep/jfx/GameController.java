@@ -39,6 +39,8 @@ public class GameController {
             case START_COMBAT:
                 attack_button.setDisable(false);
                 potion_button.setDisable(false);
+                attack_button.setVisible(false);
+                potion_button.setVisible(false);
 
                 fightButton.setText("Lancer le combat !");
                 fightButton.setOnAction( event -> {
@@ -48,6 +50,8 @@ public class GameController {
                     } );
                 break;
             case HERO_TURN:
+                attack_button.setVisible(true);
+                potion_button.setVisible(true);
                 attack_button.setDisable(false);
                 potion_button.setDisable(false);
 
@@ -70,7 +74,8 @@ public class GameController {
             case ENEMY_TURN:
                 attack_button.setDisable(true);
                 potion_button.setDisable(true);
-
+                attack_button.setVisible(false);
+                potion_button.setVisible(false);
                 fightButton.setText("Attaque de l'ennemi...");
                 fightButton.setOnAction( event -> {
                     Game.context.startEnemyTurn();
