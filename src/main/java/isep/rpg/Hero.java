@@ -10,6 +10,8 @@ public abstract class Hero extends Fighter {
     private List<Food> lembas;
 
     public void defend() {}
-    public void useConsumable(Consumable consumable) {}
+    public void useConsumable() {
+        this.addLifePoint(5);
+    }
 
 }

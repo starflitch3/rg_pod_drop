@@ -135,15 +135,11 @@ public class Game {
             this.fighters.remove(ennemy);
         }
     }
-
-    public void startHeroTurnDefense() {
-        Fighter ennemy = this.enemies.get(0); //--> 1 seul ennemi pour l'instant...
-        boolean ennemyDefeated = this.currentFighter.defense(ennemy);
-        if (ennemyDefeated) {
-            this.enemies.remove(ennemy);
-            this.fighters.remove(ennemy);
-        }
+    public void usePotion(){
+        this.currentFighter.addLifePoint(5);
     }
+
+
 
     public void startEnemyTurn() {
         // L'ennemi attaque au hasard un des héros encore vivant
@@ -154,5 +150,7 @@ public class Game {
             this.fighters.remove(hero);
         }
     }
+
+
 
 }

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isep.jfx.GameController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isep.jfx.GameController">
    <children>
       <HBox prefHeight="358.0" prefWidth="600.0">
          <children>
@@ -20,7 +20,11 @@
             </ListView>
          </children>
       </HBox>
-      <Button fx:id="DefenseButton" mnemonicParsing="false" text="Button" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="attack_button" mnemonicParsing="false" text="test _attack" />
+            <Button fx:id="potion_button" mnemonicParsing="false" text="test_potion" />
+         </children></HBox>
       <Button fx:id="fightButton" defaultButton="true" mnemonicParsing="false" text="Lancer le combat !" />
    </children>
 </VBox>
