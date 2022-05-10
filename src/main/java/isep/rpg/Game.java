@@ -22,9 +22,8 @@ public class Game {
         Game.context.startCombat();
     }
 
-    public static enum Status { START_COMBAT, HERO_TURN, ENEMY_TURN, END_GAME }
+    public static enum Status { START_COMBAT, HERO_SELECTION, HERO_TURN, ENEMY_TURN, END_GAME }
     public Status status;
-
 
 
     public static List<Hero> heroes;

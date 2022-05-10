@@ -3,6 +3,8 @@ package isep.jfx;
 import isep.rpg.Enemy;
 import isep.rpg.Game;
 import isep.rpg.Hero;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,6 +26,7 @@ public class GameController {
     // "initialize()" est appelé par JavaFX à l'affichage de la fenêtre
     @FXML
     public void initialize() {
+        initHeroSelectionListener();
         updateListViews();
         updateFightButton();
     }
@@ -93,5 +96,13 @@ public class GameController {
         }
     }
 
-
+    private void initHeroSelectionListener() {
+        heroList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                System.out.println("ListView selection changed from oldValue = "
+                        + oldValue + " to newValue = " + newValue);
+            }
+        });
+    }
 }
