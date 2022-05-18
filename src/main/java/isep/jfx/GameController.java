@@ -45,7 +45,7 @@ public class GameController {
     private void updateFightButton() {
         switch (Game.context.status) {
             case START_COMBAT:
-
+                gameOutput.setText("tristan montre nous tes fesse");
                 attack_button.setDisable(false);
                 potion_button.setDisable(false);
                 attack_button.setVisible(false);
