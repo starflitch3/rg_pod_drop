@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 
@@ -24,6 +25,8 @@ public class GameController {
     Button attack_button;
     @FXML
     Button potion_button;
+    @FXML
+    Label gameOutput;
 
     // "initialize()" est appelé par JavaFX à l'affichage de la fenêtre
     @FXML

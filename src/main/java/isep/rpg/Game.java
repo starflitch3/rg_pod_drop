@@ -120,7 +120,6 @@ public class Game {
             } else {
                 this.status = Game.Status.ENEMY_TURN;
             }
-
         }
     }
 

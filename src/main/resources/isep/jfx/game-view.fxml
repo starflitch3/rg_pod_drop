@@ -4,8 +4,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isep.jfx.GameController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isep.jfx.GameController">
    <children>
+      <VBox fx:id="gameOutput" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Label" />
+         </children>
+      </VBox>
       <HBox prefHeight="358.0" prefWidth="600.0">
          <children>
             <ListView fx:id="heroList" prefHeight="308.0" prefWidth="228.0" HBox.hgrow="ALWAYS">
